@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang = "en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Amy Speed | Portfolio</title>
+    <link href="float-grid.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Elsie|Rubik&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+</head>
+
+<body id = "scroll-top">
+    <nav role = "navigation">
+        <div class = "links">
+        <h2>
+            <a href = "#scroll-portfolio"><span>&ltli&gt</span>portfolio<span>&lt/li&gt</span></a>
+            <a href = "#scroll-bio"><span>&ltli&gt</span>bio<span>&lt/li&gt</span></a>
+            <a href = "#scroll-contact"><span>&ltli&gt</span>contact<span>&lt/li&gt</span></a>
+        </h2>
+        </div>
+        <header>
+                <h1><span>&lth1&gt</span>amy speed<span>&lt/h1&gt</span></h1>
+        </header>
+    </nav>
+    <main role = "main">
+        <div class = "container" role = "container">
+        <div class = "row welcome">
+            <div class = "col-12">
+                <p>Welcome!! I am a full-stack web developer currently residing in Austin, TX. Please enjoy perusing my portfolio pieces...</p>
+            </div>
+        </div>
+        <div class = "row portfolio">
+            <h3 id = "scroll-portfolio"><span>&lth2&gt</span>portfolio<span>&lt/h2&gt</span></h3>
+            <div class = "col-3">
+                <div class = "box">
+                    <img class = "screenshot" src="./images/IPA.png" alt = "landing page of IPA app"/>
+                    <div class = "info">
+                        <h4><a href = "https://pacific-basin-65264.herokuapp.com/" target = "_blank">[ aI pi eI ] IPA Learning App</a></h4>
+                        <p>A gateway to your immersive International Phonetic Alphabet learning experience!<br />
+                            React/Redux/HTML5/CSS3/JavaScript
+                            Node.js/Express/MongoDB/Mongoose
+                            Travis CI/mLab/Heroku</p>
+                        <button id = "js-IPA-live">live</button><button id = "js-IPA-code">code</button><button id = "js-IPA-about">about</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-3">
+                <div class = "box">
+                    <img class = "screenshot" src="./images/Ditties.png" alt = "landing page of Ditties app"/>
+                    <div class = "info">
+                        <h4><a href = "https://cryptic-atoll-45082.herokuapp.com/" target = "_blank">Ditties | The Songwriter's App</a></h4>
+                        <p>Where users can create and track their amazing song ideas.<br />
+                            JavaScript/jQuery/HTML5/CSS3
+                            Node.js/Express/MongoDB/Mongoose
+                            Travis CI/mLab/Heroku
+                        </p>
+                        <button id = "js-Ditties-live">live</button><button id = "js-Ditties-code">code</button><button id = "js-Ditties-about">about</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-3">
+                <div class="box">
+                    <img class = "screenshot" src="./images/EventsInTech.png" alt = "landing page of EventsInTech app"/>
+                    <div class = "info">
+                        <h4><a href = "https://amyspeed.github.io/EventsInTech/" target = "_blank">Events In Tech</a></h4>
+                        <p>A front-end discovery application. Where users can search a third-party API for live Science and Technology events in their area.<br />
+                            JavaScript/jQuery/HTML5/CSS3
+                        </p>
+                        <button id = "js-Events-live">live</button><button id = "js-Events-code">code</button><button id = "js-Events-about">about</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-3">
+                <div class="box">
+                    <img class = "screenshot" src="./images/VocalLit.png" alt = "landing page of VocalLit app"/>
+                    <div class = "info">
+                        <h4><a href = "https://amyspeed.github.io/VocalLit-QuizApp/" target = "_blank">Art Song and Opera Composers</a></h4>
+                        <p>A Vocal Lit Quiz of Fun Facts!!!<br />
+                            Along with an identifying work of vocal music, this front-end quiz features bizarre facts about each composer.<br />
+                            JavaScript/jQuery/HTML5/CSS3</p>
+                        <button id = "js-Lit-live">live</button><button id = "js-Lit-code">code</button><button id = "js-Lit-about">about</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row bio">
+            <div class = "col-12">
+                <h3  id = "scroll-bio"><span>&lth2&gt</span>bio<span>&lt/h2&gt</span></h3>
+                <p class = "p-bio">Thank you for taking the time to get to know me! I am unequal parts Texan, Californian, and New Englander.
+                    I have an equal, yet seemingly opposing, passion for the technical and the artistic, as well as for the leading edge and the antiquated.
+                    To illustrate, I have much enjoyed building these projects, like I have enjoyed building opera characters for performance.
+                    I am a creative developer with an additional academic background in classical singing and an employment history
+                    in fast-paced customer service.
+                </p>
+            </div>
+        </div>
+        <div class = "row contact">
+                <div class = "col-12">
+                    <h3  id = "scroll-contact"><span>&lth2&gt</span>contact<span>&lt/h2&gt</span></h3>
+                    <div class = "icon-container">
+                        <a class = "icons-a" href = "mailto:amy.speed.henley@gmail.com" target = "_blank"><img class = "icons" src = "./images/email.png" alt = "email" /></a>
+                        <a class = "icons-a" href = "https://www.linkedin.com/in/amy-speed-b533bb159" target = "_blank"><img class = "icons" src = "./images/linkedin.png" alt = "linked in" /></a>
+                        <a class = "icons-a" href = "https://github.com/amyspeed" target = "_blank"><img class = "icons" src = "./images/GitHub-Mark-120px-plus.png" alt = "GitHub" /></a>
+                    </div>
+                </div>
+            </div>
+    </main>
+    </div>
+    <footer>
+        <a href = "#scroll-top"><div class = "spinner"></div></a>
+    </footer>
+    <script src = "index.js"></script>
+</body>
+</html>
