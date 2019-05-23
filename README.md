@@ -2,7 +2,7 @@
 A simplified front-end app to display recent projects, bio, and contact links.
 
 ## Live Version
-[See site live!]()
+[See site live!](https://amyspeed.github.io/Portfolio/)
 
 ## Technologies
 
