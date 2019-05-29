@@ -16,6 +16,31 @@ h2 {
     font-size: 14px;
 }
 
+h3 {
+    text-align: center;
+    font-size: 22px;
+}
+
+h4 {
+    font-family: 'Elsie', cursive;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+p {
+    line-height: 160%;
+}
+
+.p-bio {
+    font-size: 14px;
+    columns: 2 500px;
+}
+
+.welcome {
+    font-size: 18px;
+    line-height: 160%;
+}
+
 @media only screen and (min-width: 800px){
     h1{
         font-size: 35px;
@@ -23,7 +48,19 @@ h2 {
     h2 {
         font-size: 18px;
     }
+    .p-bio {
+        font-size: 17px;
+    }
+    .welcome {
+        font-size: 20px;
+    }
 }
+
+/* @media only screen and (min-width: 900px) {
+    .p-bio{
+       columns: 2 100px;
+    }
+} */
 
 nav {
     position: fixed;
@@ -56,7 +93,7 @@ a:hover, a:focus {
     color: rgb(255, 106, 25);
 }
 
-span {
+.tags {
     font-size: 80%;
     font-family: 'Actor', sans-serif;
     color: rgba(7, 7, 7, 0.112);
@@ -64,17 +101,6 @@ span {
 
 main {
     padding-top: 105px;
-}
-
-p {
-    font-size: 14px;
-    line-height: 150%;
-}
-
-@media only screen and (min-width: 900px) {
-    .p-bio{
-       column-count: 2; 
-    }
 }
 
 #scroll-bio, #scroll-portfolio, #scroll-contact {
@@ -95,17 +121,6 @@ p {
 
 .col-12 {
     padding: 20px;
-}
-
-h3 {
-    text-align: center;
-    font-size: 22px;
-}
-
-h4 {
-    font-family: 'Elsie', cursive;
-    font-size: 20px;
-    margin-top: 10px;
 }
 
 .box {
@@ -190,8 +205,8 @@ button:hover, button:focus {
 }
 
 footer {
-    margin-top: 10%;
-    margin-bottom: 400px;
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 .spinner {
