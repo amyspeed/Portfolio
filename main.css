@@ -28,12 +28,13 @@ h4 {
 }
 
 p {
-    line-height: 160%;
+    line-height: 150%;
 }
 
 .p-bio {
     font-size: 14px;
     columns: 2 500px;
+    line-height: 160%;
 }
 
 .welcome {
