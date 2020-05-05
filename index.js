@@ -1,5 +1,16 @@
 'use strict';
 
+$(document).ready(function() {
+	$(window).scroll(function() {
+  	if($(document).scrollTop() > 10) {
+        $('nav').addClass('scrolling');
+    }
+    else {
+    $('nav').removeClass('scrolling');
+    }
+  });
+});
+
 const LINKS = {
     'js-IPA-live': 'https://pacific-basin-65264.herokuapp.com/',
     'js-IPA-code': 'https://github.com/amyspeed/IPA-Front-End',

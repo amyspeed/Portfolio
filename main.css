@@ -1,8 +1,10 @@
 html{
     font-family: 'Rubik', sans-serif;
     background-image: url(./images/wood.jpg);
-    background-repeat: repeat;
-    background-size: 100%;
+}
+
+body {
+    margin: 0;
 }
 
 h1 {
@@ -65,45 +67,119 @@ p {
 
 nav {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100%;
     z-index: 100;
-    background-image: url(./images/wood.jpg);
-    background-size: 100%;
-}
-
-.links {
-    position: relative;
-    text-align: right;
-    margin-right: 20px;
+    width: 100%;
+    height: 80px;
+    /* background-image: url(./images/wood.jpg); */
+    /* background-size: 100%; */
+    transition: all ease .5s; 
 }
 
 header {
     position: relative;
-    margin-left: 20px;
-    margin-top: 0;
+    float: left;
+    margin-left: 5%;
+    padding-top: 25px;
+    transition: all .5s ease-in-out;
+}
+
+.header-amy {
+    cursor: pointer;
+    color: white;
+    transition: all .15s ease-in-out;
+}
+
+.links-container {
+    position: relative;
+    float: right;
+    text-align: right;
+    margin-right: 5%;
+    margin-left: auto;
+    padding-top: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.link {
+    display: inline-block;
+    color: white;
+    margin-right: 20px;
+    transition: all .15s ease-in-out;
 }
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    transition: all .25s ease-in-out
+    color: inherit;
 }
 
-a:hover, a:focus {
-    color: rgb(255, 106, 25);
-    transform: translate(0, -2px) scale(1.1);
+.header-amy:hover, .header-amy:focus {
+    transform: translate(0, -1.5px) scale(1.1);
 }
 
-.tags {
-    font-size: 80%;
-    font-family: 'Actor', sans-serif;
-    color: rgba(7, 7, 7, 0.112);
+.link:hover, link:focus {
+    transform: translate(0, -1.5px);
+}
+
+nav.scrolling {
+    height: 40px;
+    transition: all .5s ease-in-out;
+    background-image: url(./images/wood.jpg);
+    background-size: 100%;
+    /* background: rgb(255, 255, 255); */
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    /* background: rgb(0, 0, 0); */
+}
+
+nav.scrolling header {
+    padding-top: 0px;
+    margin-top: -3px;
+    margin-left: 30px;
+    color: rgb(0,0,0);
+    transition: all .5s ease-in-out;
+    transform: scale(0.7);
+}
+
+nav.scrolling .header-amy {
+    color: rgb(0,0,0);
+}
+
+nav.scrolling .links-container {
+    padding-top: 0px;
+    margin-top: -3px;
+    transition: all .5s ease-in-out;
+    transform: scale(0.9);
+}
+
+nav.scrolling .link {
+    color: rgb(0,0,0);
+}
+
+
+.hero-img-container {
+    top: 0px;
+    position: fixed;
+    z-index: -2;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    background: linear-gradient(rgba(0 ,0, 0, 1), rgba(0,0,0,0));
 }
 
 main {
-    padding-top: 105px;
+    background-image: url(./images/wood.jpg);
+    /* background-color: rgb(209, 208, 208); */
+    background-repeat: repeat;
+    background-size: 100%;
+    margin-top: 300px;
 }
 
 #scroll-bio, #scroll-portfolio, #scroll-contact {
@@ -116,8 +192,7 @@ main {
 }
 
 .row {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
 }
@@ -189,7 +264,8 @@ button {
 }
 
 button:hover, button:focus {
-    background-color: rgb(255, 106, 25);
+    background-color: rgb(219, 255, 252);
+    color: black;
     transform: translate(0, -1.4px);
 }
 
@@ -209,7 +285,7 @@ button:hover, button:focus {
 }
 
 .icons:hover, icons:focus {
-    background-color: rgba(255, 105, 25, 0.858);
+    background-color: rgb(219, 255, 252);
     border-radius: 100%;
     transform: translate(0, -1.5px) scale(1.05);
 }
