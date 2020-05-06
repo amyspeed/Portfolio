@@ -11,6 +11,54 @@ $(document).ready(function() {
   });
 });
 
+function handleNav() {
+    let section;
+    $('body').on('click', '.scrollTo', function(event) {
+        event.preventDefault();
+        section = $(this).attr('id');
+        console.log(section);
+        $('html,body').animate({
+            scrollTop: $(`#scroll-${section}`).offset().top -42
+        }, 'slow');
+    })
+}
+
+
+function appendProjects() {
+    $('.projects').append(
+        `<div class="row">
+            <div class="col-6">
+                <div class = "box">
+                    <img class = "screenshot" src="./images/IPA.png" alt = "landing page of IPA app"/>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="box">
+                <div class = "info">
+                    <h4><a href = "https://pacific-basin-65264.herokuapp.com/" target = "_blank">[ aI pi eI ] IPA Learning App</a></h4>
+                    <p>A gateway to your immersive International Phonetic Alphabet learning experience!<br />
+                        React/Redux/HTML5/CSS3/JavaScript
+                        Node.js/Express/MongoDB/Mongoose
+                        Travis CI/mLab/Heroku</p>
+                    <button id = "js-IPA-live">live</button>
+                    <button id = "js-IPA-code">code</button>
+                    <button id = "js-IPA-about">about</button>
+                </div>
+                </div>
+            </div>
+        </div>`
+
+    );
+}
+
+handleNav();
+appendProjects();
+
+
+
+
+
+
 const LINKS = {
     'js-IPA-live': 'https://pacific-basin-65264.herokuapp.com/',
     'js-IPA-code': 'https://github.com/amyspeed/IPA-Front-End',
@@ -27,7 +75,7 @@ const LINKS = {
 }
 
 function handleButtons() {
-    $('.portfolio').on('click', 'button', function(event) {
+    $('.projects').on('click', 'button', function(event) {
         event.preventDefault();
         const ID = $(this).attr('id');
         findKey(ID);

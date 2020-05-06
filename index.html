@@ -13,20 +13,30 @@
 
 </head>
 
-<body id = "scroll-top">
+<body>
+    <div id = "scroll-top"></div>
+
     <nav role = "navigation">
         <header>
-            <h1 class="header-amy">amy speed</h1>
+            <a class="scrollTo" id="top">
+                <h1 class="header-amy">amy speed</h1>
+            </a>
         </header>
         <div class = "links-container">
             <div class="link">
-                <a href = "#scroll-bio"><h2>bio</h2></a>
+                <a class="scrollTo" id="bio">
+                    <h2>bio</h2>
+                </a>
             </div>
-            <div class="link">
-                <a href = "#scroll-portfolio"><h2>projects</h2></a>
+            <div class="link" id="projects">
+                <a class="scrollTo" id="projects">
+                    <h2>projects</h2>
+                </a>
             </div>
-            <div class="link">
-                <a href = "#scroll-contact"><h2>contact</h2></a>
+            <div class="link" id="contact">
+                <a class="scrollTo" id="contact">
+                    <h2>contact</h2>
+                </a>
             </div>
         </div>
     </nav>
@@ -37,43 +47,48 @@
     </div>
 
     <main role = "main">
-        <div class = "container" role = "container">
         <div class = "row welcome">
             <div class = "col-12">
                 <p class = "welcome">Welcome!! I am a full-stack web developer currently residing in Austin, TX. Please enjoy perusing my portfolio pieces...</p>
             </div>
         </div>
 
-        <div class = "row bio">
-            <div class = "col-12">
-                <h3  id = "scroll-bio">bio</h3>
-                <p class = "p-bio">Thank you for taking the time to get to know me! I am unequal parts Texan, Californian, and New Englander.
-                    I have an equal, yet seemingly opposing, passion for the technical and the artistic, as well as for the leading edge and the antiquated.
-                    To illustrate, I have much enjoyed building these projects like I have enjoyed building opera characters for performance.
-                    I am a creative developer with an additional academic background in classical singing and an employment history
-                    in fast-paced customer service.
-                </p>
+        <div class = "bio" id = "scroll-bio">
+            <h3>bio</h3>
+                <div class = "row">
+                    <div class = "col-12">
+                    <p class = "p-bio">Thank you for taking the time to get to know me! I am unequal parts Texan, Californian, and New Englander.
+                        I have an equal, yet seemingly opposing, passion for the technical and the artistic, as well as for the leading edge and the antiquated.
+                        To illustrate, I have much enjoyed building these projects like I have enjoyed building opera characters for performance.
+                        I am a creative developer with an additional academic background in classical singing and an employment history
+                        in fast-paced customer service.
+                    </p>
+                    </div>
             </div>
         </div>
 
-        <div class = "row portfolio">
-            <h3 id = "scroll-portfolio">projects</h3>
-            <div class = "col-3">
+        <div class = "projects" id = "scroll-projects">
+            <h3>projects</h3>
+            <!-- <div class="col-6">
                 <div class = "box">
                     <img class = "screenshot" src="./images/IPA.png" alt = "landing page of IPA app"/>
-                    <div class = "info">
-                        <h4><a href = "https://pacific-basin-65264.herokuapp.com/" target = "_blank">[ aI pi eI ] IPA Learning App</a></h4>
-                        <p>A gateway to your immersive International Phonetic Alphabet learning experience!<br />
-                            React/Redux/HTML5/CSS3/JavaScript
-                            Node.js/Express/MongoDB/Mongoose
-                            Travis CI/mLab/Heroku</p>
-                        <button id = "js-IPA-live">live</button>
-                        <button id = "js-IPA-code">code</button>
-                        <button id = "js-IPA-about">about</button>
-                    </div>
                 </div>
             </div>
-            <div class = "col-3">
+            <div class="col-6">
+                <div class="box">
+                <div class = "info">
+                    <h4><a href = "https://pacific-basin-65264.herokuapp.com/" target = "_blank">[ aI pi eI ] IPA Learning App</a></h4>
+                    <p>A gateway to your immersive International Phonetic Alphabet learning experience!<br />
+                        React/Redux/HTML5/CSS3/JavaScript
+                        Node.js/Express/MongoDB/Mongoose
+                        Travis CI/mLab/Heroku</p>
+                    <button id = "js-IPA-live">live</button>
+                    <button id = "js-IPA-code">code</button>
+                    <button id = "js-IPA-about">about</button>
+                </div>
+                </div>
+            </div> -->
+            <!-- <div class = "col-3">
                 <div class = "box">
                     <img class = "screenshot" src="./images/Ditties.png" alt = "landing page of Ditties app"/>
                     <div class = "info">
@@ -116,12 +131,12 @@
                         <button id = "js-Lit-about">about</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         
-        <div class = "row contact">
+        <div class = "row contact" id = "scroll-contact">
                 <div class = "col-12">
-                    <h3  id = "scroll-contact">contact</h3>
+                    <h3>contact</h3>
                     <div class = "icon-container">
                         <a class = "icons-a" href = "mailto:amy.speed.henley@gmail.com" target = "_blank"><img class = "icons" src = "./images/email.png" alt = "email" /></a>
                         <a class = "icons-a" href = "https://www.linkedin.com/in/amy-speed" target = "_blank"><img class = "icons" src = "./images/linkedin.png" alt = "linked in" /></a>
@@ -130,10 +145,12 @@
                 </div>
             </div>
     </main>
-    </div>
+    
     <footer>
-        <a href = "#scroll-top"><div class = "spinner"></div></a>
-    </footer>
-    <script src = "index.js"></script>
+        <a class="scrollTo" id="top"><div class = "spinner"></div></a>
+    </footer>    
+
+    <script src = "index.js"></script>   
+
 </body>
 </html>
