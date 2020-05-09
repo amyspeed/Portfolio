@@ -165,20 +165,37 @@ nav.scrolling .link {
 .hero-img-container {
     top: 0px;
     position: fixed;
+    width: 100%;
     z-index: -2;
+    background: black;
 }
 
 .hero-img {
-    width: 100%;
+    position: relative;
+    margin-top: 45px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 .hero-overlay {
     position: absolute;
-    top: 0;
     width: 100%;
-    height: 120px;
+    height: 0px;
+    top: 0;
+    padding-bottom: 20%;
     z-index: 1;
-    background: linear-gradient(rgba(0 ,0, 0, 1), rgba(0,0,0,0));
+    background: linear-gradient(rgba(0 ,0, 0, 1) 18%, rgba(0,0,0,0));
+}
+
+.hero-overlay-2 {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 0;
+    padding-bottom: 62%;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(0 ,0, 0, 1) 0.8%, rgba(0,0,0,0) 12%, rgba(0,0,0,0) 90%, rgba(0 ,0, 0, 1) 99.2%);
 }
 
 main {
@@ -186,13 +203,24 @@ main {
     /* background-color: rgb(209, 208, 208); */
     background-repeat: repeat;
     background-size: 100%;
-    margin-top: 300px;
+    margin-top: 62%;
     padding-top: 1px;
-    box-shadow: 4px -5px 10px rgba(0, 0, 0, 0.7);
+    padding-bottom: 30px;
+    box-shadow: 0px -5px 50px rgba(0, 0, 0, 1);
 }
 
+@media only screen and (min-width: 640px){
+    main {
+        margin-top: 57%;
+    }
+    .hero-overlay-2 {
+        padding-bottom: 59%;
+    }
+}
+
+
 .row {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.4);
     margin-top: 10px;
     border-radius: 5px;
@@ -211,6 +239,7 @@ main {
 
 .screenshot {
     width: 100%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .info {
@@ -238,21 +267,24 @@ main {
 
 button {
     font-family: 'Elsie', cursive;
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 30%;
     font-size: 18px;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: none;
     cursor: pointer;
     background-color: black;
     color: white;
-    transition: all .25s ease-in-out;
+    transition: all .15s ease-in-out;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 button:hover, button:focus {
     background-color: rgb(219, 255, 252);
     color: black;
-    transform: translate(0, -1.4px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(0, -2px) scale(1.01);
 }
 
 .contact {
