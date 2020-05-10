@@ -1,29 +1,5 @@
 'use strict';
 
-$(document).ready(function() {
-	$(window).scroll(function() {
-  	if($(document).scrollTop() > 10) {
-        $('nav').addClass('scrolling');
-    }
-    else {
-    $('nav').removeClass('scrolling');
-    }
-  });
-});
-
-function handleNav() {
-    let section;
-    $('body').on('click', '.scrollTo', function(event) {
-        event.preventDefault();
-        section = $(this).attr('id');
-        console.log(section);
-        $('html,body').animate({
-            scrollTop: $(`#scroll-${section}`).offset().top -42
-        }, 'slow');
-    })
-}
-
-
 const STORE = [
     {
         'image': './images/world.png',
@@ -86,17 +62,63 @@ const STORE = [
     },
 ]
 
+$(document).ready(function() {
+
+    // watch for a scroll away from the top of doc to change navigation menu styles
+    $(window).scroll(function() {
+        if($(document).scrollTop() > 10) {
+          $('nav').addClass('scrolling');
+      }
+      else {
+      $('nav').removeClass('scrolling');
+      }
+    });
+
+    // Watch for a scroll to each image container to add animation into view
+	$(window).scroll(function() {
+        for (let i = 0; i < STORE.length; i++) {
+            const topOfElement = $(`#js-img-cont-${i}`).offset().top;
+            const bottomOfElement = $(`#js-img-cont-${i}`).offset().top + $('.screenshot-container').outerHeight();
+            const bottomOfScreen = $(window).scrollTop() + $(window).innerHeight();
+            const topOfScreen = $(window).scrollTop();
+  	        if((bottomOfScreen > topOfElement) && (topOfScreen < bottomOfElement)) {
+                $(`#js-img-cont-${i}`).addClass('in-view');
+            }
+            else {
+            $(`#js-img-cont-${i}`).removeClass('in-view');
+            }
+        }
+    });
+});
+
+
+
+function handleNav() {
+    let section;
+    $('body').on('click', '.scrollTo', function(event) {
+        event.preventDefault();
+        section = $(this).attr('id');
+        console.log(section);
+        $('html,body').animate({
+            scrollTop: $(`#scroll-${section}`).offset().top -42
+        }, 'slow');
+    })
+}
+
+
 function appendProjects() {
     for (let i = 0; i < STORE.length; i++) {
     $('.projects').append(
-        `<div class="row">
+        `<div class="row projects-row">
             <div class="col-6">
-                <div class = "box">
-                    <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
+                <div class = "screenshot-container" id="js-img-cont-${i}">
+                    <a href = "${STORE[i].liveLink}" target = "_blank">
+                        <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
+                    </a>
                 </div>
             </div>
             <div class="col-6">
-                <div class="box">
+                <div class="info-container">
                 <div class = "info">
                     <h4><a href = "${STORE[i].liveLink}" target = "_blank">${STORE[i].title}</a></h4>
                     <p>${STORE[i].description}</p>
