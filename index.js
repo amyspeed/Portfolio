@@ -85,7 +85,7 @@ $(document).ready(function() {
                 $(`#js-img-cont-${i}`).addClass('in-view');
             }
             else {
-            $(`#js-img-cont-${i}`).removeClass('in-view');
+                $(`#js-img-cont-${i}`).removeClass('in-view');
             }
         }
     });
@@ -98,48 +98,99 @@ function handleNav() {
     $('body').on('click', '.scrollTo', function(event) {
         event.preventDefault();
         section = $(this).attr('id');
-        console.log(section);
-        $('html,body').animate({
-            scrollTop: $(`#scroll-${section}`).offset().top -42
-        }, 'slow');
+        // To avoid using the same ID on two elements, "hamburger-" 
+        // has been added to the ID of the second iteration.
+        // Let's check for it and slice it off!
+        if(section.slice(0, 10) === "hamburger-") {
+            section = section.slice(10);
+            scrollTo(section);
+            // close the hamburger menu
+            $('.toggler').prop('checked', false);
+        }
+        else {
+            scrollTo(section);
+        }
     })
+}
+
+function scrollTo(section) {
+    $('html,body').animate({
+        scrollTop: $(`#scroll-${section}`).offset().top -45
+    }, 'slow');
 }
 
 
 function appendProjects() {
     for (let i = 0; i < STORE.length; i++) {
-    $('.projects').append(
-        `<div class="row projects-row">
-            <div class="col-6">
-                <div class = "screenshot-container" id="js-img-cont-${i}">
-                    <a href = "${STORE[i].liveLink}" target = "_blank">
-                        <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="info-container">
-                <div class = "info">
-                    <h4><a href = "${STORE[i].liveLink}" target = "_blank">${STORE[i].title}</a></h4>
-                    <p>${STORE[i].description}</p>
-                    <button id = "${STORE[i].liveButtonId}">live</button>
-                    <button id = "${STORE[i].codeButtonId}">code</button>
-                    <button id = "${STORE[i].aboutButtonId}">about</button>
-                </div>
-                </div>
-            </div>
-        </div>`
+        if (isEven(i)) {
+            $('.projects').append(
+                `<div class="row projects-row">
+                    <div class="col-6">
+                        <div class = "screenshot-container" id="js-img-cont-${i}">
+                            <a href = "${STORE[i].liveLink}" target = "_blank">
+                                <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="info-container">
+                            <div class = "info">
+                                <h4><a href = "${STORE[i].liveLink}" target = "_blank">${STORE[i].title}</a></h4>
+                                <p>${STORE[i].description}</p>
+                                <button id = "${STORE[i].liveButtonId}">live</button>
+                                <button id = "${STORE[i].codeButtonId}">code</button>
+                                <button id = "${STORE[i].aboutButtonId}">about</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
 
-    );
+            );
+        } else {
+            // on Odd numbered projects, the orientation of img to description is swapped.
+            // The use of "hidden-desktop" and "hidden-mobile" is intended to switch the 
+            // orientation back for mobile view.
+            $('.projects').append(
+                `<div class="row projects-row">
+                    <div class="col-6 hidden-desktop">
+                        <div class = "screenshot-container" id="js-img-cont-${i}">
+                            <a href = "${STORE[i].liveLink}" target = "_blank">
+                                <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="info-container">
+                            <div class = "info">
+                                <h4><a href = "${STORE[i].liveLink}" target = "_blank">${STORE[i].title}</a></h4>
+                                <p>${STORE[i].description}</p>
+                                <button id = "${STORE[i].liveButtonId}">live</button>
+                                <button id = "${STORE[i].codeButtonId}">code</button>
+                                <button id = "${STORE[i].aboutButtonId}">about</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 hidden-mobile">
+                        <div class = "screenshot-container" id="js-img-cont-${i}">
+                            <a href = "${STORE[i].liveLink}" target = "_blank">
+                                <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>`
+
+            );
+        }
     }
 }
 
-handleNav();
-appendProjects();
-
-
-
-
+function isEven(i) {
+    if(i%2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
 const LINKS = {
@@ -177,4 +228,6 @@ function linkToUrl(URL) {
     window.open(URL, '_blank');
 }
 
+handleNav();
+appendProjects();
 handleButtons();
