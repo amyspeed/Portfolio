@@ -232,7 +232,7 @@ function findKey(ID) {
 }
 
 function linkToUrl(URL) {
-    window.open(URL, '_blank');
+    window.open(URL, '_blank', 'noreferrer');
 }
 
 handleNav();
