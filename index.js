@@ -129,7 +129,7 @@ function appendProjects() {
                 `<div class="main-row row projects-row">
                     <div class="col-6">
                         <div class = "screenshot-container" id="js-img-cont-${i}">
-                            <a href = "${STORE[i].liveLink}" target = "_blank">
+                            <a href = "${STORE[i].liveLink}" target = "_blank" rel="noreferrer">
                                 <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
                             </a>
                         </div>
@@ -137,7 +137,7 @@ function appendProjects() {
                     <div class="col-6">
                         <div class="info-container">
                             <div class = "info">
-                                <a href = "${STORE[i].liveLink}" target = "_blank"><h4 class="title">${STORE[i].title}</h4></a>
+                                <a href = "${STORE[i].liveLink}" target = "_blank" rel="noreferrer"><h4 class="title">${STORE[i].title}</h4></a>
                                 <p>${STORE[i].description}</p>
                                 <button id = "${STORE[i].liveButtonId}">live</button>
                                 <button id = "${STORE[i].codeButtonId}">code</button>
@@ -158,7 +158,7 @@ function appendProjects() {
                     <div class="col-6">
                         <div class="info-container">
                             <div class = "info">
-                                <a href = "${STORE[i].liveLink}" target = "_blank"><h4 class="title">${STORE[i].title}</h4></a>
+                                <a href = "${STORE[i].liveLink}" target = "_blank" rel="noreferrer"><h4 class="title">${STORE[i].title}</h4></a>
                                 <p>${STORE[i].description}</p>
                                 <button id = "${STORE[i].liveButtonId}">live</button>
                                 <button id = "${STORE[i].codeButtonId}">code</button>
@@ -168,7 +168,7 @@ function appendProjects() {
                     </div>
                     <div class="col-6 hidden-mobile">
                         <div class = "screenshot-container" id="js-img-cont-${i}">
-                            <a href = "${STORE[i].liveLink}" target = "_blank">
+                            <a href = "${STORE[i].liveLink}" target = "_blank" rel="noreferrer">
                                 <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
                             </a>
                         </div>
