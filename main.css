@@ -67,6 +67,7 @@ p {
 }
 
 .welcome-txt-1 {
+    font-family: 'Elsie', cursive;
     color: rgb(51, 77, 95);
     font-size: 50px;
     margin-top: 0px;
@@ -75,6 +76,7 @@ p {
 }
 
 .welcome-txt-3 {
+    font-family: 'Elsie', cursive;
     color: rgb(51, 77, 95);
     font-size: 20px;
     text-align: left;
@@ -96,6 +98,9 @@ p {
     }
     h3 {
         font-size: 25px;
+    }
+    h4 {
+        font-size: 30px;
     }
     .p-about {
         font-size: 17px;
@@ -574,6 +579,12 @@ main {
     .hidden-desktop {
         display: none;
     }
+
+    .projects-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .info-container {
@@ -603,11 +614,13 @@ main {
 }
 
 .title {
+    color: rgb(51, 77, 95);
     transition: all .2s ease-in-out;
 }
 
 .title:hover, .title:focus {
-    transform: translate(0, -2px) scale(1.02);
+    color: black;
+    transform: translate(0, -1.5px) scale(1.02);
 }
 
 button {
