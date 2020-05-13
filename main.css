@@ -6,6 +6,7 @@ html{
 
 body {
     margin: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 :focus {
@@ -23,10 +24,12 @@ h1 {
     font-size: 32px;
     margin-top: 0px;
     margin-bottom: 15px;
+    font-weight: normal;
 }
 
 h2 {
     font-size: 14px;
+    font-weight: normal;
 }
 
 h3 {
@@ -34,6 +37,7 @@ h3 {
     font-size: 22px;
     margin-top: 30px;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 
 h4 {
@@ -42,6 +46,7 @@ h4 {
     margin-top: 10px;
     margin-bottom: 0px;
     line-height: 150%;
+    font-weight: normal;
 }
 
 p {
