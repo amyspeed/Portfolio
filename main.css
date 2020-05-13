@@ -477,6 +477,12 @@ main {
     
 }
 
+@media only screen and (min-width: 1400px){
+    main {
+        margin-top: 50%;
+    }
+}
+
 @media only screen and (max-width: 500px){
     main {
         margin-top: 65%;
