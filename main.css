@@ -54,34 +54,37 @@ p {
     line-height: 160%;
 }
 
-.welcome-col {
-    display: block;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+.welcome-row {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+.welcome-col {
+    padding-left: 10%;
+    padding-right: 5%
+}
+
 .welcome-txt-1 {
     color: rgb(51, 77, 95);
-    font-size: 40px;
+    font-size: 50px;
     margin-top: 0px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .welcome-txt-3 {
     color: rgb(51, 77, 95);
     font-size: 20px;
-    line-height: 110%;
+    text-align: left;
+    margin-bottom: 0;
 }
 
 .welcome-txt-2 {
     font-size: 18px;
-    line-height: 140%;
-    margin-left: 15%;
+    text-align: left;
+    margin-top: 10px;
 }
 
 @media only screen and (min-width: 800px){
@@ -91,6 +94,9 @@ p {
     h2 {
         font-size: 18px;
     }
+    h3 {
+        font-size: 25px;
+    }
     .p-about {
         font-size: 17px;
     }
@@ -98,10 +104,25 @@ p {
         font-size: 25px;
     }
     .welcome-txt-1 {
-        font-size: 50px;
+        font-size: 65px;
     }
     .welcome-txt-3 {
-        font-size: 30px;
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .welcome-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .welcome-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcome-txt-1 {
+        text-align: center;
     }
 }
 
@@ -110,7 +131,7 @@ p {
         font-size: 17px;
     }
     .welcome-txt-1 {
-        font-size: 30px;
+        font-size: 35px;
     }
     .welcome-txt-3 {
         font-size: 20px;
