@@ -5,7 +5,10 @@ const STORE = [
         'image': './images/world.png',
         'alt': 'COVID-19 App screenshot',
         'title': 'COVID-19 Analytics',
-        'description': '',
+        'description': `An analytics dashboard with live COVID-19 Statistics. Created as a fun front end project 
+            during the "Shelter-in-place" order.<br />
+            React/Redux/HTML5/CSS3/JavaScript
+            Recharts/jVectorMap/NewsAPI`,
         'liveLink' : 'https://covid-19.amyspeed.dev',
         'liveButtonId' : 'js-covid-live',
         'codeButtonId' : 'js-covid-code',
@@ -51,9 +54,8 @@ const STORE = [
     {
         'image': './images/VocalLit.png',
         'alt': 'Vocal Lit app screenshot',
-        'title': 'Art Song and Opera Composers',
-        'description': `A Vocal Lit Quiz of Fun Facts!!!<br />
-                        Along with an identifying work of vocal music, this front-end quiz features bizarre facts about each composer.<br />
+        'title': 'A Vocal Lit Quiz of Fun Facts!!!',
+        'description': `Along with an identifying work of vocal music, this front-end quiz features bizarre facts about each art song or opera composer.<br />
                         JavaScript/jQuery/HTML5/CSS3`,
         'liveLink' : 'https://amyspeed.github.io/VocalLit-QuizApp/',
         'liveButtonId' : 'js-Lit-live',
@@ -122,9 +124,9 @@ function scrollTo(section) {
 
 function appendProjects() {
     for (let i = 0; i < STORE.length; i++) {
-        if (isEven(i)) {
+        if (isEven(i) || isMobile()) {
             $('.projects').append(
-                `<div class="row projects-row">
+                `<div class="main-row row projects-row">
                     <div class="col-6">
                         <div class = "screenshot-container" id="js-img-cont-${i}">
                             <a href = "${STORE[i].liveLink}" target = "_blank">
@@ -135,7 +137,7 @@ function appendProjects() {
                     <div class="col-6">
                         <div class="info-container">
                             <div class = "info">
-                                <h4><a href = "${STORE[i].liveLink}" target = "_blank">${STORE[i].title}</a></h4>
+                                <a href = "${STORE[i].liveLink}" target = "_blank"><h4 class="title">${STORE[i].title}</h4></a>
                                 <p>${STORE[i].description}</p>
                                 <button id = "${STORE[i].liveButtonId}">live</button>
                                 <button id = "${STORE[i].codeButtonId}">code</button>
@@ -151,18 +153,12 @@ function appendProjects() {
             // The use of "hidden-desktop" and "hidden-mobile" is intended to switch the 
             // orientation back for mobile view.
             $('.projects').append(
-                `<div class="row projects-row">
-                    <div class="col-6 hidden-desktop">
-                        <div class = "screenshot-container" id="js-img-cont-${i}">
-                            <a href = "${STORE[i].liveLink}" target = "_blank">
-                                <img class = "screenshot" src="${STORE[i].image}" alt = "${STORE[i].alt}"/>
-                            </a>
-                        </div>
-                    </div>
+                `<div class="main-row row projects-row">
+
                     <div class="col-6">
                         <div class="info-container">
                             <div class = "info">
-                                <h4><a href = "${STORE[i].liveLink}" target = "_blank">${STORE[i].title}</a></h4>
+                                <a href = "${STORE[i].liveLink}" target = "_blank"><h4 class="title">${STORE[i].title}</h4></a>
                                 <p>${STORE[i].description}</p>
                                 <button id = "${STORE[i].liveButtonId}">live</button>
                                 <button id = "${STORE[i].codeButtonId}">code</button>
@@ -192,8 +188,19 @@ function isEven(i) {
     }
 }
 
+function isMobile() {
+    if ($( document ).width() < 640) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 const LINKS = {
+    'js-covid-live': 'https://covid-19.amyspeed.dev',
+    'js-covid-code': 'https://github.com/amyspeed/COVID-19',
+    'js-covid-about': 'https://github.com/amyspeed/COVID-19/blob/master/README.md',
     'js-IPA-live': 'https://pacific-basin-65264.herokuapp.com/',
     'js-IPA-code': 'https://github.com/amyspeed/IPA-Front-End',
     'js-IPA-about': 'https://github.com/amyspeed/IPA-Front-End/blob/master/README.md',

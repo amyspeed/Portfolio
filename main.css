@@ -8,6 +8,11 @@ body {
     margin: 0;
 }
 
+:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
 #scroll-top {
     position: absolute;
     top: 0;
@@ -35,6 +40,8 @@ h4 {
     font-family: 'Elsie', cursive;
     font-size: 20px;
     margin-top: 10px;
+    margin-bottom: 0px;
+    line-height: 150%;
 }
 
 p {
@@ -47,9 +54,34 @@ p {
     line-height: 160%;
 }
 
-.welcome {
+.welcome-col {
+    display: block;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.welcome-txt-1 {
+    color: rgb(51, 77, 95);
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.welcome-txt-3 {
+    color: rgb(51, 77, 95);
+    font-size: 20px;
+    line-height: 110%;
+}
+
+.welcome-txt-2 {
     font-size: 18px;
-    line-height: 160%;
+    line-height: 140%;
+    margin-left: 15%;
 }
 
 @media only screen and (min-width: 800px){
@@ -62,16 +94,28 @@ p {
     .p-about {
         font-size: 17px;
     }
-    .welcome {
-        font-size: 20px;
+    .welcome-txt-2 {
+        font-size: 25px;
+    }
+    .welcome-txt-1 {
+        font-size: 50px;
+    }
+    .welcome-txt-3 {
+        font-size: 30px;
     }
 }
 
-/* @media only screen and (min-width: 900px) {
-    .p-about{
-       columns: 2 100px;
+@media only screen and (max-width: 500px){
+    .welcome-txt-2 {
+        font-size: 17px;
     }
-} */
+    .welcome-txt-1 {
+        font-size: 30px;
+    }
+    .welcome-txt-3 {
+        font-size: 20px;
+    }
+}
 
 nav {
     position: fixed;
@@ -123,7 +167,7 @@ a {
     transform: translate(0, -1.5px) scale(1.1);
 }
 
-.link:hover, link:focus {
+.link:hover, .link:focus {
     transform: translate(0, -1.8px);
 }
 
@@ -210,7 +254,8 @@ nav.scrolling .link {
     padding: 4px;
     transition: all .25s ease-in-out;
 }
-.hamburger-container .toggler:hover + .hamburger {
+.hamburger-container .toggler:hover + .hamburger,
+.hamburger-container .toggler:focus + .hamburger {
     box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.9);
     transform: translate(0, -1.5px) scale(1.1);
 }
@@ -257,7 +302,8 @@ nav.scrolling .hamburger-container .hamburger > div {
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-nav.scrolling .hamburger-container .toggler:hover + .hamburger {
+nav.scrolling .hamburger-container .toggler:hover + .hamburger,
+nav.scrolling .hamburger-container .toggler:focus + .hamburger {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
     transform: translate(0, -1.5px) scale(1.1);
 }
@@ -292,7 +338,7 @@ nav.scrolling .hamburger-container .toggler:hover + .hamburger {
 .hamburger-container .menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     visibility: hidden;
@@ -311,7 +357,7 @@ nav.scrolling .hamburger-container .toggler:hover + .hamburger {
     display: flex;
     flex: none;
     align-items: flex-start;
-    padding-top: 150px;
+    padding-top: 160px;
     justify-content: center;
     transform: scale(0);
     transition: all 0.4s ease;
@@ -334,11 +380,17 @@ nav.scrolling .hamburger-container .toggler:hover + .hamburger {
     transition: all 0.15s ease;
 }
 
-.hamburger-container .menu > div > div > ul > li:hover {
+.hamburger-container .menu > div > div > ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.hamburger-container .menu > div > div > ul > li:hover,
+.hamburger-container .menu > div > div > ul > li:focus {
     transform: translate(0, -2px) scale(1.2);
 }
 
-.menu-wrap .menu > div > div > ul > li > a {
+.hamburger-container .menu > div > div > ul > li > a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
@@ -384,13 +436,17 @@ nav.scrolling .hamburger-container .toggler:hover + .hamburger {
 
 main {
     background-image: url(./images/wood-gray.png);
-    /* background-color: rgb(209, 208, 208); */
     background-repeat: repeat;
     background-size: 100%;
     margin-top: 63%;
     padding-top: 1px;
-    padding-bottom: 30px;
+    padding-bottom: 0;
     box-shadow: 0px -5px 50px rgba(0, 0, 0, 1);
+}
+
+.welcome, .about, .projects {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
 }
 
 @media only screen and (min-width: 640px){
@@ -434,13 +490,11 @@ main {
 }
 
 
-.row {
+.main-row {
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.4);
     margin-top: 15px;
     border-radius: 5px;
-    margin-left: 1%;
-    margin-right: 1%;
 }
 
 
@@ -472,9 +526,9 @@ main {
     cursor: pointer;
 }
 
-.screenshot:hover {
+.screenshot:hover, .screenshot:focus {
     /* transform: translate(0, -2.5px) scale(1.02); */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hidden-mobile {
@@ -521,6 +575,14 @@ main {
     }
 }
 
+.title {
+    transition: all .2s ease-in-out;
+}
+
+.title:hover, .title:focus {
+    transform: translate(0, -2px) scale(1.02);
+}
+
 button {
     font-family: 'Elsie', cursive;
     padding-top: 3px;
@@ -530,51 +592,77 @@ button {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    background-color: black;
+    background-color: rgb(51, 77, 95);
     color: white;
-    transition: all .15s ease-in-out;
+    transition: all .2s ease-in-out;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 button:hover, button:focus {
-    background-color: rgb(219, 255, 252);
-    color: black;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
     transform: translate(0, -2px) scale(1.01);
 }
 
 .contact {
     text-align: center;
+    position: relative;
+}
+
+.footer-img {
+    position: absolute;
+    background-image: url(./images/knit-backdrop.JPG);
+    background-size: cover;
+    background-position: 50% 1%;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    z-index: 0;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-footer {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(rgba(0 ,0, 0, 0), rgba(0,0,0,1) 90%);
+}
+
+.contact-row {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    padding-top: 32px;
+    z-index: 3;
 }
 
 .icon-container {
     display: inline-block;
 }
 
-.icons {
-    width: 48px;
+i {
+    font-size: 45px;
     margin-right: 20px;
-    transition: all .25s ease-in-out;
-    border-radius: 100%;
+    color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
 }
 
-.icons:hover, icons:focus {
-    background-color: rgb(219, 255, 252);
-    border-radius: 100%;
-    transform: translate(0, -1.5px) scale(1.05);
+i:hover, i:focus {
+    transform: translate(0, -2px) scale(1.1);
 }
 
-footer {
+/* footer {
     padding-top: 50px;
     padding-bottom: 80px;
     background-image: url(./images/wood-gray.png);
-    /* background-color: rgb(209, 208, 208); */
     background-repeat: repeat;
     background-size: 100%;
 
-}
+} */
 
-.spinner {
+/* .spinner {
     margin-left: auto;
     margin-right: auto;
     width: 90px;
@@ -608,4 +696,4 @@ footer {
     to {
         transform:rotate(0deg);
     }
-}
+} */

@@ -9,6 +9,7 @@
     <link href="float-grid.css" rel="stylesheet" type="text/css" />
     <link href="main.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Elsie|Rubik&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bd77dea011.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
 </head>
@@ -78,15 +79,18 @@
     </div>
 
     <main role = "main">
-        <div class = "row welcome">
-            <div class = "col-12">
-                <p class = "welcome">Welcome!! I am a full-stack web developer currently residing in Austin, TX. Please enjoy perusing my portfolio pieces...</p>
+        <div class = "main-row row welcome">
+            <div class = "welcome-col">
+                <p class = "welcome-txt-1">Welcome!!</p>
+                <p class = "welcome-txt-2">Please enjoy perusing my portfolio projects.</p>
+                <p class = "welcome-txt-3"> Have questions or comments?</p>
+                <p class = "welcome-txt-2">Feel free to reach out!</p>
             </div>
         </div>
 
         <div class = "about" id = "scroll-about">
             <h3>about</h3>
-                <div class = "row">
+                <div class = "main-row row">
                     <div class = "col-12">
                     <p class = "p-about">Thank you for taking the time to get to know me! I am unequal parts Texan, Californian, and New Englander.
                         I have an equal, yet seemingly opposing, passion for the technical and the artistic, as well as for the leading edge and the antiquated.
@@ -167,21 +171,23 @@
         
         <div class = "contact" id = "scroll-contact">
             <h3>contact</h3>
-            <div class = "row">
-                    <div class = "col-12">
-                        <div class = "icon-container">
-                            <a class = "icons-a" href = "mailto:amy.speed.henley@gmail.com" target = "_blank"><img class = "icons" src = "./images/email.png" alt = "email" /></a>
-                            <a class = "icons-a" href = "https://www.linkedin.com/in/amy-speed" target = "_blank"><img class = "icons" src = "./images/linkedin.png" alt = "linked in" /></a>
-                            <a class = "icons-a" href = "https://github.com/amyspeed" target = "_blank"><img class = "icons" src = "./images/GitHub-Mark-120px-plus.png" alt = "GitHub" /></a>
-                        </div>
+                <div class = "footer-img"></div>
+                <div class="overlay-footer"></div>
+                <!-- <div class = "contact-row row"> -->
+                <div class = "contact-row">
+                    <div class = "icon-container">
+                        <a class = "icons-a" href = "mailto:amy.speed.henley@gmail.com" target = "_blank"><i class="fas fa-envelope-square"></i></a>
+                        <a class = "icons-a" href = "https://www.linkedin.com/in/amy-speed" target = "_blank"><i class="fab fa-linkedin"></i></a>
+                        <a class = "icons-a" href = "https://github.com/amyspeed" target = "_blank"><i class="fab fa-github-square"></i></a>
                     </div>
                 </div>
+                <!-- </div> -->
             </div>
     </main>
     
-    <footer>
+    <!-- <footer>
         <a class="scrollTo" id="top"><div class = "spinner"></div></a>
-    </footer>    
+    </footer>     -->
 
     <script src = "index.js"></script>   
 
