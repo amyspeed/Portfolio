@@ -22,7 +22,7 @@ const STORE = [
                         React/Redux/HTML5/CSS3/JavaScript
                         Node.js/Express/MongoDB/Mongoose
                         Travis CI/mLab/Heroku`,
-        'liveLink' : 'https://pacific-basin-65264.herokuapp.com/',
+        'liveLink' : 'https://ipa-learning.herokuapp.com/',
         'liveButtonId' : 'js-IPA-live',
         'codeButtonId' : 'js-IPA-code',
         'aboutButtonId' : 'js-IPA-about',
@@ -46,7 +46,7 @@ const STORE = [
         'title': 'Events In Tech',
         'description': `A front-end discovery application. Where users can search a third-party API for live Science and Technology events in their area.<br />
                         JavaScript/jQuery/HTML5/CSS3`,
-        'liveLink' : 'https://amyspeed.github.io/EventsInTech/',
+        'liveLink' : 'https://events-in-tech.amyspeed.dev/',
         'liveButtonId' : 'js-Events-live',
         'codeButtonId' : 'js-Events-code',
         'aboutButtonId' : 'js-Events-about',
@@ -57,7 +57,7 @@ const STORE = [
         'title': 'A Vocal Lit Quiz of Fun Facts!!!',
         'description': `Along with an identifying work of vocal music, this front-end quiz features bizarre facts about each art song or opera composer.<br />
                         JavaScript/jQuery/HTML5/CSS3`,
-        'liveLink' : 'https://amyspeed.github.io/VocalLit-QuizApp/',
+        'liveLink' : 'https://vocal-lit-quiz.amyspeed.dev/',
         'liveButtonId' : 'js-Lit-live',
         'codeButtonId' : 'js-Lit-code',
         'aboutButtonId' : 'js-Lit-about',
@@ -201,17 +201,17 @@ const LINKS = {
     'js-covid-live': 'https://covid-19.amyspeed.dev',
     'js-covid-code': 'https://github.com/amyspeed/COVID-19',
     'js-covid-about': 'https://github.com/amyspeed/COVID-19/blob/master/README.md',
-    'js-IPA-live': 'https://pacific-basin-65264.herokuapp.com/',
+    'js-IPA-live': 'https://ipa-learning.herokuapp.com/',
     'js-IPA-code': 'https://github.com/amyspeed/IPA-Front-End',
     'js-IPA-about': 'https://github.com/amyspeed/IPA-Front-End/blob/master/README.md',
     'js-Ditties-live': 'https://cryptic-atoll-45082.herokuapp.com/',
     'js-Ditties-code': 'https://github.com/amyspeed/Ditties-Node-Capstone',
     'js-Ditties-about': 'https://github.com/amyspeed/Ditties-Node-Capstone/blob/master/README.md',
-    'js-Events-live': 'https://amyspeed.github.io/EventsInTech/',
+    'js-Events-live': 'https://events-in-tech.amyspeed.dev/',
     'js-Events-code': 'https://github.com/amyspeed/EventsInTech',
     'js-Events-about': 'https://github.com/amyspeed/EventsInTech/blob/master/README.md',
     'js-Lit-live': 'https://amyspeed.github.io/VocalLit-QuizApp/',
-    'js-Lit-code': 'https://github.com/amyspeed/VocalLit-QuizApp',
+    'js-Lit-code': 'https://vocal-lit-quiz.amyspeed.dev/',
     'js-Lit-about': 'https://github.com/amyspeed/VocalLit-QuizApp/blob/master/README.md',
 }
 
