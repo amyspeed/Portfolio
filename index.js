@@ -210,8 +210,8 @@ const LINKS = {
     'js-Events-live': 'https://events-in-tech.amyspeed.dev/',
     'js-Events-code': 'https://github.com/amyspeed/EventsInTech',
     'js-Events-about': 'https://github.com/amyspeed/EventsInTech/blob/master/README.md',
-    'js-Lit-live': 'https://amyspeed.github.io/VocalLit-QuizApp/',
-    'js-Lit-code': 'https://vocal-lit-quiz.amyspeed.dev/',
+    'js-Lit-live': 'https://vocal-lit-quiz.amyspeed.dev/',
+    'js-Lit-code': 'https://github.com/amyspeed/VocalLit-QuizApp',
     'js-Lit-about': 'https://github.com/amyspeed/VocalLit-QuizApp/blob/master/README.md',
 }
 
