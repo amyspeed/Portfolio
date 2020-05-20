@@ -35,7 +35,7 @@ const STORE = [
                         JavaScript/jQuery/HTML5/CSS3
                         Node.js/Express/MongoDB/Mongoose
                         Travis CI/mLab/Heroku`,
-        'liveLink' : 'https://cryptic-atoll-45082.herokuapp.com/',
+        'liveLink' : ' https://ditties.herokuapp.com/',
         'liveButtonId' : 'js-Ditties-live',
         'codeButtonId' : 'js-Ditties-code',
         'aboutButtonId' : 'js-Ditties-about',
@@ -204,7 +204,7 @@ const LINKS = {
     'js-IPA-live': 'https://ipa-learning.herokuapp.com/',
     'js-IPA-code': 'https://github.com/amyspeed/IPA-Front-End',
     'js-IPA-about': 'https://github.com/amyspeed/IPA-Front-End/blob/master/README.md',
-    'js-Ditties-live': 'https://cryptic-atoll-45082.herokuapp.com/',
+    'js-Ditties-live': ' https://ditties.herokuapp.com/',
     'js-Ditties-code': 'https://github.com/amyspeed/Ditties-Node-Capstone',
     'js-Ditties-about': 'https://github.com/amyspeed/Ditties-Node-Capstone/blob/master/README.md',
     'js-Events-live': 'https://events-in-tech.amyspeed.dev/',
