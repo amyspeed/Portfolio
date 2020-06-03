@@ -2,6 +2,18 @@
 
 const STORE = [
     {
+        'image': './images/cameron.png',
+        'alt': 'Cameron Speed Landing',
+        'title': 'Cameron Speed | Harmonica',
+        'description': `This web application is a musician's marketing platform<br/>to connect to live and remote recording gigs.<br />
+            React/React Hooks/Mailchimp API/Node.js
+            Nodemailer/Netlify/Heroku/CSS3/JavaScript`,
+        'liveLink' : 'https://www.cameronspeed.com',
+        'liveButtonId' : 'js-cam-live',
+        'codeButtonId' : 'js-cam-code',
+        'aboutButtonId' : 'js-cam-about',
+    },
+    {
         'image': './images/world.png',
         'alt': 'COVID-19 App screenshot',
         'title': 'COVID-19 Analytics',
@@ -198,6 +210,9 @@ function isMobile() {
 
 
 const LINKS = {
+    'js-cam-live': 'https://www.cameronspeed.com',
+    'js-cam-code': 'https://github.com/amyspeed/cameron-speed-harmonica',
+    'js-cam-about': 'https://github.com/amyspeed/cameron-speed-harmonica/blob/master/README.md',
     'js-covid-live': 'https://covid-19.amyspeed.dev',
     'js-covid-code': 'https://github.com/amyspeed/COVID-19',
     'js-covid-about': 'https://github.com/amyspeed/COVID-19/blob/master/README.md',
