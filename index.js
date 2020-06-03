@@ -6,8 +6,9 @@ const STORE = [
         'alt': 'Cameron Speed Landing',
         'title': 'Cameron Speed | Harmonica',
         'description': `This web application is a musician's marketing platform<br/>to connect to live and remote recording gigs.<br />
-            React/React Hooks/Mailchimp API/Node.js
-            Nodemailer/Netlify/Heroku/CSS3/JavaScript`,
+            React/React Hooks/JavaScript/CSS3<br />
+            Node.js/Nodemailer/Netlify/Heroku<br />
+            Mailchimp API/Facebook Pixel/Google Analytics`,
         'liveLink' : 'https://www.cameronspeed.com',
         'liveButtonId' : 'js-cam-live',
         'codeButtonId' : 'js-cam-code',
