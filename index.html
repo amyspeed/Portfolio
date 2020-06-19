@@ -178,12 +178,82 @@
         
         <div class = "contact" id = "scroll-contact">
             <h3>contact</h3>
+            <div class="row main-row form-row">
+                <div class = "col-12">
+                <form class="contact-form">
+                    <div class="col-6 form-col">
+                        <label class="name" for="first-name">First Name</label>
+                        <br/>
+                        <input 
+                            name="first-name"
+                            id="first-name"
+                            class="contact-input"
+                            type="text"
+                            placeholder="First Name"
+                            required
+                        />
+                    </div>
+                    <div class="col-6 form-col">
+                        <label class="name" for="last-name">Last Name</label>
+                        <br/>
+                        <input 
+                            name="last-name"
+                            id="last-name"
+                            class="contact-input"
+                            type="text"
+                            placeholder="Last Name"
+                            required
+                        />
+                    </div>
+                    <div class="col-12 form-col">
+                        <label class="email" for="email">Your Email</label>
+                        <br/>
+                        <input 
+                            name="email"
+                            id="email"
+                            class="contact-input"
+                            type="email"
+                            placeholder="your@email.com"
+                            required
+                        />
+                    </div>
+                    <div class="col-12 form-col">
+                        <label class="subject" for="subject">How can I help you?</label>
+                        <br/>
+                        <input 
+                            name="subject"
+                            id="subject"
+                            class="contact-input"
+                            type="text"
+                            placeholder="Email Subject"
+                            required
+                        />
+                    </div>
+                    <div class="col-12 form-col">
+                        <label class="message" for="message">Your Message</label>
+                        <br/>
+                        <textarea 
+                            name="message"
+                            id="message"
+                            class="message"
+                            type="text"
+                            placeholder="Please write your message here"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="col-12 form-col">
+                        <button id="contact-button" class="contact-button"><i id="plane-icon" class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+            </div>
                 <div class = "footer-img"></div>
                 <div class="overlay-footer"></div>
                 <!-- <div class = "contact-row row"> -->
                 <div class = "contact-row">
                     <div class = "icon-container">
-                        <a class = "icons-a" href = "mailto:amy.speed.henley@gmail.com" target = "_blank" rel="noreferrer"><i class="fas fa-envelope-square"></i></a>
+                        <!-- <a class = "icons-a" href = "mailto:amy.speed.henley@gmail.com" target = "_blank" rel="noreferrer"><i class="fas fa-envelope-square"></i></a> -->
                         <a class = "icons-a" href = "https://www.linkedin.com/in/amy-speed" target = "_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
                         <a class = "icons-a" href = "https://github.com/amyspeed" target = "_blank" rel="noreferrer"><i class="fab fa-github-square"></i></a>
                     </div>
@@ -196,7 +266,8 @@
         <a class="scrollTo" id="top"><div class = "spinner"></div></a>
     </footer>     -->
 
-    <script src = "index.js"></script>   
+    <script src = "index.js"></script>
+    <script src = "contactForm.js"></script>   
 
 </body>
 </html>

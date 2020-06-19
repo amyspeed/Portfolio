@@ -474,7 +474,7 @@ main {
     box-shadow: 0px -5px 50px rgba(0, 0, 0, 1);
 }
 
-.welcome, .about, .projects {
+.welcome, .about, .projects, .form-row {
     margin-left: 1.5%;
     margin-right: 1.5%;
 }
@@ -536,6 +536,10 @@ main {
 
 .col-12 {
     padding: 20px;
+}
+
+.form-col {
+    padding: 10px;
 }
 
 .screenshot-container {
@@ -652,6 +656,84 @@ button:hover, button:focus {
     text-align: center;
     position: relative;
 }
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: left;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    border: 1px solid rgb(182, 182, 182);
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.contact-input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(182, 182, 182);
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.2);
+    margin-top: 5px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.form-col {
+    padding-top: 5px;
+}
+
+.contact-input {
+    height: 40px;
+}
+
+.contact-input:focus, textarea:focus {
+    background-color: rgb(231, 255, 251);
+    border-radius: 5px;
+    /* border: none; */
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.4);
+}
+
+.contact-button {
+    width: 100%;
+    height: 45px;
+}
+
+#plane-icon {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#plane-icon:hover {
+    transform: none;
+}
+
+.send-link-wrap {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all ease-in-out 0.3s;
+}
+
+.send-link-wrap:hover, .send-link-wrap:focus {
+    transform: translate(0px, -1.5px) scale(1.05);
+}
+
 
 .footer-img {
     position: absolute;
