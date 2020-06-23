@@ -28,7 +28,7 @@ function revertSendButton() {
 
 function sendData(data) {
     // console.log(data);
-    fetch('https://cameron-speed-api.herokuapp.com/api/email-amy', {
+    fetch('https://amyspeed-backend.herokuapp.com/api/email-amy', {
     // fetch('http://localhost:8080/api/email-amy', {
         method: 'POST',
         headers: {
