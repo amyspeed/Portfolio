@@ -5,7 +5,7 @@ const STORE = [
         'image': './images/cameron.png',
         'alt': 'Cameron Speed Landing',
         'title': 'Cameron Speed | Harmonica',
-        'description': `This web application is a musician's marketing platform<br/>to connect to live and remote recording gigs.<br />
+        'description': `This progressive web app is a musician's marketing platform<br/>to connect to live and remote recording gigs.<br />
             React/React Hooks/JavaScript/CSS3<br />
             Node.js/Nodemailer/Netlify/Heroku<br />
             Mailchimp API/Facebook Pixel/Google Analytics`,
